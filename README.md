@@ -1,4 +1,4 @@
-# su25-jpa-crud-api
+# Individula-Assignment-3-CRUD-API
 ## Description
 Simple CRUD API for Animal Objects with JPA (Hibernate)
 
@@ -9,7 +9,7 @@ Simple CRUD API for Animal Objects with JPA (Hibernate)
 - Get the project
     - clone
         ```
-      git clone https://github.com/uncg-csc340/su25-jpa-crud-api.git
+      https://github.com/Darlenne-M/Individual-Assignment-3-CRUD-API.git
         ```
     - OR download zip.
 - Open the project in VS Code.

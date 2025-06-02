@@ -11,6 +11,6 @@ public interface AnimalRepository extends JpaRepository<Animal, Long>{
     @Query(value = "select * from animals a where a.age >= ?1 ", nativeQuery = true)
     List<Animal> getAgeOverTwo(double age);
 
-    @Query(value = "select * from animals a where a.name like '%?1%' ", nativeQuery = true)
+   @Query(value = "SELECT * FROM animals a WHERE a.name ILIKE CONCAT('%', ?1, '%')", nativeQuery = true)
     List<Animal> getAnimalsByName(String name);
 }

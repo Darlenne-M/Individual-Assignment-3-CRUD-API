@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * AnimalController is a REST controller that handles HTTP requests related to
- * students.
- * It provides endpoints for CRUD operations on student data.
+ * animal.
+ * It provides endpoints for CRUD operations on animal data.
  */
 @RestController
 public class AnimalController {
@@ -66,10 +66,10 @@ public class AnimalController {
 
 
     /**
-   * Endpoint to get students by major
+   * Endpoint to get animals by breed
    *
-   * @param major The major to search for
-   * @return List of students with the specified major
+   * @param breed The breed to search for
+   * @return List of animals with the specified breed
    */
 
    @GetMapping("/animals/breed/{breed}")
@@ -77,12 +77,7 @@ public class AnimalController {
     return animalService.getAnimalsByBreed(breed);
   }
 
-/**
-   * Endpoint to get honors students with GPA above a specified threshold
-   *
-   * @param gpa The GPA threshold for honors students
-   * @return List of honors students with GPA above the specified threshold
-   */
+
   @GetMapping("/animals/age")
   public Object getAgeOverTwo(@RequestParam(name = "age", defaultValue = "2") double age){
     return new ResponseEntity<>(animalService.getAgeOverTwo(age), HttpStatus.OK);
@@ -92,8 +87,8 @@ public class AnimalController {
   /**
    * Endpoint to add a new animal
    *
-   * @param student The student to add
-   * @return List of all students
+   * @param animal The animal to add
+   * @return List of all animals
    */
     @PostMapping("/animals")
     public Object addAnimal(@RequestBody Animal animal){
@@ -101,11 +96,11 @@ public class AnimalController {
     }
 
       /**
-   * Endpoint to update a student
+   * Endpoint to update an animal
    *
-   * @param id      The ID of the student to update
-   * @param student The updated student information
-   * @return The updated student
+   * @param id      The ID of the animal to update
+   * @param animal The updated animal information
+   * @return The updated animal
    */
 
    @PutMapping("/animals/{id}")
@@ -115,10 +110,10 @@ public class AnimalController {
    }
 
    /**
-   * Endpoint to delete a student
+   * Endpoint to delete a animal
    *
-   * @param id The ID of the student to delete
-   * @return List of all students
+   * @param id The ID of the animal to delete
+   * @return List of all animals
    */
 
    @DeleteMapping("/animals/{id}")
@@ -129,9 +124,9 @@ public class AnimalController {
 
 
    /**
-   * Endpoint to write a student to a JSON file
+   * Endpoint to write a animal to a JSON file
    *
-   * @param student The student to write
+   * @param animal The animal to write
    * @return An empty string indicating success
    */
    @PostMapping("/animals/writeFile")

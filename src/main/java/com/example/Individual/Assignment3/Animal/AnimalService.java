@@ -16,19 +16,19 @@ public class AnimalService {
     private AnimalRepository animalRepository;
 
   /**
-   * Method to get all students
+   * Method to get all animals
    *
-   * @return List of all students
+   * @return List of all animals
    */
     public Object getAllAnimals(){
         return animalRepository.findAll();
     }
 
       /**
-   * Method to get a student by ID
+   * Method to get an animal by ID
    *
-   * @param studentId The ID of the student to retrieve
-   * @return The student with the specified ID
+   * @param dogId The ID of the animal to retrieve
+   * @return The animal with the specified ID
    */
 
    public Animal getAnimalById(@PathVariable long dogId){
@@ -37,20 +37,20 @@ public class AnimalService {
 
    
   /**
-   * Method to get students by name
+   * Method to get animals by name
    *
-   * @param name The name of the student to search for
-   * @return List of students with the specified name
+   * @param name The name of the animal to search for
+   * @return List of animals with the specified name
    */
   public Object getAnimalsByName(String name){
     return animalRepository.getAnimalsByName(name);
   }
 
  /**
-   * Method to get students by major
+   * Method to get animals by breed
    *
-   * @param major The major to search for
-   * @return List of students with the specified major
+   * @param breed The breed to search for
+   * @return List of animals with the specified breed
    */
   public Object getAnimalsByBreed(String breed){
     return animalRepository.getAnimalsByBreed(breed);
@@ -58,10 +58,10 @@ public class AnimalService {
 
   
   /**
-   * Fetch all students with a GPA above a threshold.
+   * Fetch all animals with a age above a threshold.
    *
-   * @param gpa the threshold
-   * @return the list of matching Students
+   * @param age the threshold
+   * @return the list of matching animals
    */
 
    public Object getAgeOverTwo(double age){
@@ -69,9 +69,9 @@ public class AnimalService {
    }
 
   /**
-   * Method to add a new student
+   * Method to add a new animal
    *
-   * @param student The student to add
+   * @param animal The animal to add
    */
 
    public Animal addAnimal(Animal animal){
@@ -79,10 +79,10 @@ public class AnimalService {
    }
 
    /**
-   * Method to update a student
+   * Method to update an animal
    *
-   * @param studentId The ID of the student to update
-   * @param student   The updated student information
+   * @param dogId The ID of the animal to update
+   * @param animal   The updated animal information
    */
 
    public Animal updateAnimal(Long dogId, Animal animal){
@@ -90,9 +90,9 @@ public class AnimalService {
    }
 
  /**
-   * Method to delete a student
+   * Method to delete an animal
    *
-   * @param studentId The ID of the student to delete
+   * @param dogId The ID of the animal to delete
    */
 
    public void deleteAnimal(Long dogId){
@@ -100,9 +100,9 @@ public class AnimalService {
    }
 
    /**
-   * Method to write a student object to a JSON file
+   * Method to write a animal object to a JSON file
    *
-   * @param student The student object to write
+   * @param animal The animal object to write
    */
 
    public String writeJson(Animal animal){
@@ -118,9 +118,9 @@ public class AnimalService {
 
 
      /**
-   * Method to read a student object from a JSON file
+   * Method to read a animal object from a JSON file
    *
-   * @return The student object read from the JSON file
+   * @return The animal object read from the JSON file
    */
 
    public Object readJson(){
